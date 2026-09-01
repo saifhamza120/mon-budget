@@ -1,0 +1,98 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  background: #F7F5F0;
+  color: #2b2a27;
+}
+
+.loading { padding: 40px; text-align: center; color: #888; }
+
+/* --- Auth --- */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.auth-card {
+  background: #fff;
+  border: 1px solid #e5e2d9;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 380px;
+}
+.auth-card h1 { color: #1f3d3b; margin: 0 0 4px; font-size: 24px; }
+.auth-sub { color: #888; margin: 0 0 20px; font-size: 14px; }
+.auth-card label { display: block; font-size: 13px; color: #555; margin: 12px 0 4px; }
+.auth-card input {
+  width: 100%; padding: 10px 12px; border: 1px solid #ddd8cc; border-radius: 8px; font-size: 14px;
+}
+.auth-card button[type="submit"] {
+  width: 100%; margin-top: 20px; padding: 11px; background: #c96f4a; color: #fff;
+  border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px;
+}
+.auth-card button[type="submit"]:disabled { opacity: 0.6; }
+.auth-switch {
+  width: 100%; margin-top: 14px; background: none; border: none; color: #1f3d3b;
+  font-size: 13px; cursor: pointer; text-decoration: underline;
+}
+.auth-error { color: #b3261e; font-size: 13px; margin: 10px 0 0; }
+.auth-info { color: #2a5d5a; font-size: 13px; margin: 10px 0 0; }
+
+/* --- Dashboard --- */
+.dash-wrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+.dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.dash-header h1 { color: #1f3d3b; margin: 0; font-size: 22px; }
+.dash-user { color: #888; font-size: 13px; margin: 2px 0 0; }
+.btn-ghost {
+  background: none; border: 1px solid #ddd8cc; border-radius: 8px; padding: 8px 14px;
+  font-size: 13px; cursor: pointer; color: #555;
+}
+
+.kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.kpi-card { background: #fff; border: 1px solid #e5e2d9; border-radius: 12px; padding: 16px; }
+.kpi-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+.kpi-green { color: #2a5d5a; }
+.kpi-coral { color: #c96f4a; }
+.kpi-navy { color: #1f3d3b; }
+.kpi-value { font-size: 20px; font-weight: 700; margin: 6px 0 0; }
+.pos { color: #2a5d5a; }
+.neg { color: #b3261e; }
+
+.card { background: #fff; border: 1px solid #e5e2d9; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.card h3 { margin: 0 0 12px; font-size: 14px; color: #555; }
+
+.type-toggle { display: flex; gap: 8px; margin-bottom: 12px; }
+.type-toggle button {
+  flex: 1; padding: 9px; border-radius: 8px; border: 1px solid #ddd8cc; background: #fff;
+  font-size: 13px; font-weight: 600; cursor: pointer; color: #555;
+}
+.type-toggle button.active { background: #1f3d3b; color: #fff; border-color: #1f3d3b; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.form-grid input, .form-grid select {
+  padding: 9px 10px; border: 1px solid #ddd8cc; border-radius: 8px; font-size: 13px;
+}
+.btn-primary {
+  width: 100%; padding: 10px; background: #c96f4a; color: #fff; border: none;
+  border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px;
+}
+
+.charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+.muted { color: #999; font-size: 13px; }
+
+.tx-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+.tx-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #f0eee6; }
+.tx-cat { margin: 0; font-size: 13px; font-weight: 600; }
+.tx-date { margin: 2px 0 0; font-size: 11px; color: #999; }
+.tx-right { display: flex; align-items: center; gap: 10px; }
+.tx-del { background: none; border: none; color: #ccc; cursor: pointer; font-size: 14px; }
+.tx-del:hover { color: #b3261e; }
+
+@media (max-width: 640px) {
+  .kpi-row, .charts-row, .form-grid { grid-template-columns: 1fr; }
+}
